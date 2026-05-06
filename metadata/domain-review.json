@@ -1,0 +1,73 @@
+{
+  "repo": "lattice-gfx-texture-lab",
+  "language": "Dart",
+  "category": "Graphics",
+  "goal": "Design a Dart verification harness for texture systems, covering format conversion, round-trip fixtures, and failure-oriented tests.",
+  "review_model": {
+    "terms": [
+      "geometry span",
+      "atlas pressure",
+      "shader drift",
+      "render budget"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "geometry span",
+      "signal": 52,
+      "slack": 41,
+      "drag": 20,
+      "confidence": 85,
+      "score": 170,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "atlas pressure",
+      "signal": 80,
+      "slack": 45,
+      "drag": 14,
+      "confidence": 67,
+      "score": 230,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "shader drift",
+      "signal": 76,
+      "slack": 39,
+      "drag": 26,
+      "confidence": 63,
+      "score": 176,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "render budget",
+      "signal": 78,
+      "slack": 25,
+      "drag": 8,
+      "confidence": 49,
+      "score": 206,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "geometry span",
+      "signal": 76,
+      "slack": 48,
+      "drag": 29,
+      "confidence": 46,
+      "score": 159,
+      "lane": "ship"
+    }
+  ]
+}
